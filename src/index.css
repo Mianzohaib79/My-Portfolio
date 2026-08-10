@@ -61,6 +61,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -69,7 +71,18 @@ body {
   color: var(--text-primary);
   transition: background-color var(--transition-normal), color var(--transition-normal);
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
+}
+
+.app-layout {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
 }
 
 /* Custom Scrollbar */
@@ -115,8 +128,11 @@ p {
 .container {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
 }
 
 .section {
@@ -395,6 +411,12 @@ p {
 .typing-container {
   display: inline-block;
   min-height: 1.2em;
+}
+
+@media (max-width: 768px) {
+  .typing-container {
+    min-height: 2.3em;
+  }
 }
 
 .typing-text {
@@ -1172,6 +1194,8 @@ p {
   font-size: 1rem;
   font-weight: 700;
   color: var(--text-primary);
+  word-break: break-all;
+  overflow-wrap: break-word;
 }
 
 /* Contact form inputs with floating labels */
@@ -1373,20 +1397,25 @@ p {
   .nav-menu {
     position: fixed;
     top: 80px;
-    left: -100%;
+    left: 0;
     width: 100%;
     height: calc(100vh - 80px);
     background: var(--bg-primary);
     flex-direction: column;
     padding: 48px 24px;
     gap: 24px;
-    transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateX(-100%);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s;
+    opacity: 0;
+    pointer-events: none;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     align-items: flex-start;
   }
 
   .nav-menu.open {
-    left: 0;
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .nav-underline {
@@ -1517,7 +1546,35 @@ p {
   }
 
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .about-visual {
+    width: 270px;
+    height: 270px;
+  }
+
+  .profile-image-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .orbit-line,
+  .orbit-container {
+    width: 220px;
+    height: 220px;
+  }
+
+  .orbiting-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .orbiting-icon-inner svg {
+    width: 14px;
+    height: 14px;
   }
 
   .projects-stats-grid {
