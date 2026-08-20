@@ -15,7 +15,7 @@ const Footer = () => {
         {/* Brand Logo */}
         <a href="#home" className="footer-logo" onClick={handleLogoClick}>
           <Code2 size={24} style={{ display: 'inline-block', marginRight: '6px', stroke: 'url(#footer-grad)' }} />
-          <span>MERN.Dev</span>
+          <span>M.Zohaib</span>
 
           <svg width="0" height="0" style={{ position: 'absolute' }}>
             <defs>
