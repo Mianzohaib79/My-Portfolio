@@ -35,6 +35,14 @@ const projectsData = [
     tags: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'REST API', 'Vercel'],
     liveUrl: 'https://todo-frontend-six-flax.vercel.app',
   },
+  {
+    title: 'SkyPulse Weather App',
+    badge: 'Full-Stack',
+    image: '/weather-app.png',
+    description: 'A full-stack live weather application featuring real-time GPS location tracking, animated weather forecasts, interactive hourly trends, and REST API integration.',
+    tags: ['React.js', 'Node.js', 'Express.js', 'REST API', 'Weather API', 'Vercel'],
+    liveUrl: 'https://weather-app-three-eta-47.vercel.app',
+  },
 ];
 
 const Projects = () => {
