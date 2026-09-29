@@ -12,7 +12,7 @@ const projectsData = [
     liveUrl: 'https://notes-website-hazel.vercel.app',
   },
   {
-    title: 'Restaurant Web Platform',
+    title: 'Eat-Ease Restaurant',
     badge: 'Full-Stack',
     image: '/restaurant-app.png',
     description: 'A full-stack restaurant application featuring online food ordering, interactive menu management, table reservations, and seamless REST API backend integration.',
